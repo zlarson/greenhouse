@@ -13,7 +13,7 @@ base_dir = '/sys/bus/w1/devices/'
 device_folder = glob.glob(base_dir + '28*')[0]
 device_file = device_folder + '/w1_slave'
 
-db = MySQLDatabase('Greenhouse', user='greenhouseuser', passwd='1greenhouse!', port=3306)
+db = MySQLDatabase('Greenhouse', user='greenhouseuser', passwd='', port=3306)
 
 class TemperatureReading(peewee.Model):
     internal_temperature = peewee.DecimalField()
